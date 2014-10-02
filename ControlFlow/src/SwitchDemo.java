@@ -1,5 +1,54 @@
 
 public class SwitchDemo {
+	
+	public static int getMonthNumber(String month3) {
+		int monthNumber = 0;
+		
+		if (month3 == null) {
+			return monthNumber;
+		}
+		
+		switch (month3.toLowerCase()) {
+			case "january":
+				monthNumber = 1;
+				break;
+			case "february": 
+				monthNumber = 2;
+				break;
+			case "march": 
+				monthNumber = 3;
+				break;
+			case "april": 
+				monthNumber = 4;
+				break;
+			case "may":
+				monthNumber = 5;
+				break;
+			case "june":
+				monthNumber = 6;
+				break;
+			case "july":
+				monthNumber = 7;
+				break;
+			case "august":
+				monthNumber = 8;
+				break;
+			case "september":
+				monthNumber = 9;
+				break;
+			case "october":
+				monthNumber = 10;
+				break;
+			case "november":
+				monthNumber = 11;
+				break;
+			case "december":
+				monthNumber = 12;
+				break;
+		}
+		
+		return monthNumber;
+	}
 
 	public static void main(String[] args) {
 		int month = 8;
@@ -48,6 +97,40 @@ public class SwitchDemo {
 			for(String monthName : futureMonths) {
 				System.out.println(monthName);
 			}
+		}
+		
+		int month2 = 2;
+		int year2 = 2000;
+		int numDays = 0;
+		
+		switch (month2) {
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+				numDays = 31;
+				break;
+			case 4: case 6: case 9: case 11: 
+				numDays = 30;
+				break;
+			case 2:
+				if (((year2 % 4 == 0) && !(year2 % 100 == 0) || (year2 % 400 == 0))) {
+					numDays = 29;
+				} else {
+					numDays = 28;
+				}
+				break;
+			default: 
+				System.out.println("Invalid month.");
+				break;		
+		}
+		System.out.println("Number of days " + numDays);
+		
+		String month3 = "August";
+		
+		int returnedMonthNumber = SwitchDemo.getMonthNumber(month3);
+		
+		if (returnedMonthNumber == 0) {
+			System.out.println("Invalid month.");
+		} else {
+			System.out.println(returnedMonthNumber);
 		}
 	}
 
