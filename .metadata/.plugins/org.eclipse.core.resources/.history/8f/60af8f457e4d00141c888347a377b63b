@@ -23,20 +23,16 @@ public class Bicycle {
 		return speed;
 	}
 	
+	public void setSpeed(int newValue) {
+		speed = newValue;
+	}
+	
 	public int getGear() {
 		return gear;
 	}
 	
 	public void setGear(int newValue) {
 		gear = newValue;
-	}
-	
-	public void applyBreak(int decrement) {
-		speed -= decrement;
-	}
-	
-	public void speedUp(int increment) {
-		speed += increment;
 	}
 
 }
