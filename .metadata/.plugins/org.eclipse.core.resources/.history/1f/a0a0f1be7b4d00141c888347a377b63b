@@ -1,0 +1,19 @@
+
+public class Continue {
+
+	public static void main(String[] args) {
+		String searchMe = "peter piper picked a " + "peck of pickled peppers"; 
+		int max = searchMe.length();
+		int p = 0;
+		
+		for (int i = 0; i < max; i++) {
+			if (searchMe.charAt(i) != 'p') {
+				continue;
+			}
+			p++;
+		}
+		
+		System.out.println("Found " + p + "p's in the string.");
+	}
+
+}
