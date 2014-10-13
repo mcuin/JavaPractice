@@ -14,14 +14,6 @@ public class ObjectDemo {
 		System.out.println("Area of rectOne: " + rectOne.getArea());
 		
 		rectTwo.origin = originOne;
-		
-		System.out.println("X position of rectTwo: " + rectTwo.x);
-		System.out.println("Y position of rectTwo: " + rectTwo.y);
-		
-		rectTwo.move(40, 72);
-		
-		System.out.println("X postion of rectTwo is: " + rectTwo.x);
-		System.out.println("Y positon of rectTwo is: " + rectTwo.y);
 	}
 
 }
